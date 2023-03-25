@@ -1,14 +1,12 @@
 import { useState } from "react";
-import { AddCategory } from "./components/AddCategory";
-import { GifGroup } from "./components/GifGroup";
+import { AddCategory, GifGroup } from "./components";
 
 export const GifExplorerApp = () => {
-    const [categories, setCategories] = useState([ 'One Punch' ]);
+    const [categories, setCategories] = useState([ 'Initial D' ]);
 
     const onAddCategory = (category) => {
 
         if(categories.includes(category)) return;
-
         setCategories([category, ...categories, ]);
     }
 
